@@ -1,0 +1,297 @@
+<html> 
+<head> 
+<title>My Friends</title> 
+</head>  
+<body>
+<style> 
+body{
+       background-repeat: no-repeat;
+       background-size: 100% 100%;
+       background-attachment: fixed;
+}
+</style>
+<body background="images/bg3.jpg">
+<br>
+<center><a href="index.html">My Friends</a></center> 
+<br> 
+<table bgcolor="white" width="100%" height="70" align="center" cellpadding="1" cellspacing="1">
+<tr align="center" background="images/bg1.jpg">
+<td colspan="3"></td>
+</table>
+<br>
+<center><a href="index.html"><img src="images/friends2.jpg" width="60%"></a></center>
+<br>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: century gothic;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+padding: 20px;
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+padding: 20px;
+  float: left;
+  width: 25%;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #FFDAB9;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   padding: 20px;
+   margin-top: 20px;
+background: #FFDAB9;
+    margin-right: 0;
+    border: 2px solid #91d4d1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+color: #C3F6FF;
+  background: #FFFAFA;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+
+<body>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2><center><p class="mix">GALLERY &#10084; </p></center></h2>
+<p>
+<b><h2><center><u>My Friends</center></h2></u></b>
+<p><div class="row">
+  <div class="column">
+    <center><img src="images/myfriends.gif" alt="dap" style="height: 700px; width: 700px"><center>
+  </div>
+</div></p>
+
+<p>
+<center><i><blockquote>
+<p>
+The pictures above are the pictures of my friends. I am so thankful to have a good friends like them. At first, I was afraid to make new friends because a lot of things had already happened to me that made me afraid to hang out with other people. But with them, I felt peace and happiness. They are just different, they know how to understand me, taking a good care with me and even gave me a medicine when I'm sick. There are so many things that I wanted to tell but I let Allah SWT listen to my prayers. I will miss this diploma moments with them. 
+<p>Dear, Johanies, Aina, Syidah, Ummi, Hazliza, Jacinta, Farah, Ain and Mariani. I'm sorry if I did something wrong from the beginning we know until now. You guys are the best and always be the best for me! keep working hard until we achieve our dreams. I Love You. Sincerely, amira a.k.a miracelup.
+</i></blockquote></center>
+<p>
+</p>
+<p>
+</head>
+</body>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2><center><p class="mix"><span> Myself </p></h2></center></span>
+      <center><img src="images/mira2.jpg" style="width:110px;height:150px;"></center>
+<br>
+      <div style="color: #343434; font-family: muli; font-size: 17px; margin: 0px; padding: 0px; text-align: center;">&#127799; NorHasima Amira Bt Rizal</div>
+<br>
+<div style="color: #343434; font-family: muli; font-size: 17px; margin: 0px; padding: 0px; text-align: center;">&#127799; Born in 2002</div>
+<br>
+<div style="color: #343434; font-family: muli; font-size: 17px; margin: 0px; padding: 0px; text-align: center;">&#127799; Uitm Merbok, Kedah</div>
+    </div>
+    <div class="card">
+      <h4><center><p class="mix"><p>&#9200 What Time is Now? &#9200</p></center></h4>
+      <p><canvas id="canvas" width="250" height="250"
+style="background-color:transparent">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = '#DA70D6';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#663399');
+  grad.addColorStop(0.5, 'black');
+  grad.addColorStop(1, '#663399');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = 'black';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script></p>
+    </div>
+<div class="card">
+      <h4><center><p class="mix"><p>&#127926 Play this music first &#127926</p></center></h4>
+      <center><img src="images/mira3.jpg" style="width:110px;height:150px;"></center>
+ <audio controls style="width: 250px;">
+   <source src="C:\Users\hasima\OneDrive\IND ASSIGMENT IMD311\Audio\music.mp3" type="audio/mpeg">
+</audio>
+    </div>
+<div class="card">
+      <h4><center><p class="mix">Copyright:</p></center></h4>
+<ul>
+<li> Design by: NorHasima Amira Binti Rizal </li>
+<li> Class: KIM1204A </li>
+<li> IMD311 : Introduction to Web Content Management and Design </li>
+<li> Individual Project: My Personal Website </li>
+<li> Prepared for: Sir Mohd Firdaus Bin Mohd Helmi </li>
+</ul>
+</div>
+  </div>
+</div>
+ <br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<table bgcolor="white" width="100%" height="70" align="center" cellpadding="1" cellspacing="1">
+<tr align="center" background="images/bg1.jpg">
+<td colspan="3"></td>
+</table>
+<br>
+</body>
+</html> 
